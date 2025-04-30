@@ -72,6 +72,38 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/cm
 ```bash
 ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory '{header: {frame_id: "base_footprint"}, joint_names: ["arm_base_forearm_joint", "forearm_hand_joint"], points: [{positions: [0.1, 0.4]}]}'
 ```
+# Enhancement 1
+
+After the initial design of the two-wheeled robot, the project was enhanced to include a four-wheeled robot for improved stability and control. Additionally, a two-jointed arm was integrated to provide more advanced manipulation capabilities. This enhancement allows the robot to perform more complex tasks and navigate more effectively. The upgraded design offers a more versatile platform for various robotic applications.
+
+## Usage
+## 1. Launch the Robot in Gazebo
+### To start the robot simulation in Gazebo, use the following launch command:
+```bash
+ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
+```
+![Robot Image](images/robot4.png)
+
+## 2. Launch the Robot Description in RViz
+### To visualize the robot model in RViz, use the following command:
+
+```bash
+ros2 launch my_robot_description display.launch.py
+```
+![Robot Image](images/robot3.png)
+
+## 3. Control the Movement of the 4-Wheeled Robot
+### To control the robot's movement using keyboard teleoperation, run the following command:
+
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/cmd_vel
+```
+## 4. Test the Arm Movement
+### To test the arm's movement, publish a joint trajectory using the following command:
+
+```bash
+ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory '{header: {frame_id: "base_footprint"}, joint_names: ["arm_base_forearm_joint", "forearm_hand_joint"], points: [{positions: [0.1, 0.4]}]}'
+```
 
 
 
