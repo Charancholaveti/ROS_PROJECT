@@ -44,9 +44,34 @@ This project uses the following technologies and tools for simulating and visual
 ## Project Overview
 
 We started this project with a two-wheeled robot design, incorporating one caster wheel for stability. The robot is equipped with a two-jointed arm to enable basic manipulation tasks. Our goal is to create a functional robot capable of autonomous movement and object interaction. The project serves as a foundation for further exploration and enhancements in robotics.
+## Usage
+## 1. Launch the Robot in Gazebo
+### To start the robot simulation in Gazebo, use the following launch command:
+```bash
+ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
+```
+![Robot Image](images/robot2.png)
+
+## 2. Launch the Robot Description in RViz
+### To visualize the robot model in RViz, use the following command:
+
+```bash
+ros2 launch my_robot_description display.launch.py
+```
 ![Robot Image](images/robot1.png)
 
+## 3. Control the Movement of the 4-Wheeled Robot
+### To control the robot's movement using keyboard teleoperation, run the following command:
 
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/cmd_vel
+```
+## 4. Test the Arm Movement
+### To test the arm's movement, publish a joint trajectory using the following command:
+
+```bash
+ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory '{header: {frame_id: "base_footprint"}, joint_names: ["arm_base_forearm_joint", "forearm_hand_joint"], points: [{positions: [0.1, 0.4]}]}'
+```
 
 
 
