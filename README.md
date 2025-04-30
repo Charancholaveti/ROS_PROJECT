@@ -121,11 +121,29 @@ ros2 launch my_robot_description display.launch.py
 
 Building on the previous enhancement, the two-jointed arm was further upgraded to a 6-DOF arm, offering greater flexibility and precision. A mechanical gripper was also added to enable more complex manipulation tasks, such as picking and placing objects. This upgrade significantly expands the robot's capabilities in performing various operations. The 6-DOF arm with a gripper provides enhanced dexterity for handling a wide range of objects.
 
+##  Launch the Robot Description in RViz
+### To visualize the robot model in RViz, use the following command:
+
+```bash
+ros2 launch my_robot_description display.launch.py
+```
+
 ![Robot Image](images/robot6.png)
 
 
 
 ![Robot Image](images/robot7.png)
+
+
+### How to setup this project in local environment
+1. **Create a workspace**: The first step is to create a ROS 2 workspace (`~/ros2_ws/src`) and navigate to it.
+2. **Clone the project**: Clone the repository from GitHub into the `src` folder.
+3. **Build the workspace**: Use `colcon build` to build all the packages in the workspace.
+4. **Source the setup file**: This step ensures that ROS 2 knows about the packages you just built.
+5. **Launch commands**: Instructions to launch the robot simulation in Gazebo and visualize it in RViz.
+
+Let me know if you need anything further!
+
 
 
 
