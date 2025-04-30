@@ -105,6 +105,17 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/cm
 ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory '{header: {frame_id: "base_footprint"}, joint_names: ["arm_base_forearm_joint", "forearm_hand_joint"], points: [{positions: [0.1, 0.4]}]}'
 ```
 
+# Enhancement 2
+
+The project was further enhanced by upgrading to a four-wheeled robot with a 6-DOF arm, providing greater mobility and flexibility. A 5-finger mechanical gripper was added to the arm, enabling more precise object handling and manipulation. This enhancement allows the robot to perform more complex tasks with a higher degree of dexterity. The 6-DOF arm with the 5-finger gripper enhances the robot’s ability to interact with its environment in a more sophisticated manner.
+
+##  Launch the Robot Description in RViz
+### To visualize the robot model in RViz, use the following command:
+
+```bash
+ros2 launch my_robot_description display.launch.py
+```
+![Robot Image](images/robot5.png)
 
 
 
