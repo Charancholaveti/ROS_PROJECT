@@ -8,7 +8,8 @@ This project simulates a mobile robot featuring a 4-wheeled base and a 6-DOF rob
 
 - **C.CHARAN**  
 - **K.RAMU**  
-- **K.VENKATESH**  
+- **K.VENKATESH**
+
 
 
 
