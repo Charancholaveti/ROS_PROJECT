@@ -122,6 +122,9 @@ ros2 launch my_robot_description display.launch.py
 Building on the previous enhancement, the two-jointed arm was further upgraded to a 6-DOF arm, offering greater flexibility and precision. A mechanical gripper was also added to enable more complex manipulation tasks, such as picking and placing objects. This upgrade significantly expands the robot's capabilities in performing various operations. The 6-DOF arm with a gripper provides enhanced dexterity for handling a wide range of objects.
 
 ![Robot Image](images/robot6.png)
+
+
+
 ![Robot Image](images/robot7.png)
 
 
