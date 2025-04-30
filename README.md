@@ -182,7 +182,7 @@ ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
 ```
 
 ## 6. Launch the Robot Description in RViz
-### To visualize the robot model in RViz, use the following command:
+To visualize the robot model in RViz, use the following command:
 
 ```bash
 ros2 launch my_robot_description display.launch.py
