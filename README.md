@@ -39,6 +39,13 @@ This project uses the following technologies and tools for simulating and visual
 - `worlds/` – Custom simulation world (e.g., `test_world.world`)
 - `rviz/` – RViz visualization configuration
 
+# Two-Wheeled Robot with Jointed Arm
+
+## Project Overview
+
+We started this project with a two-wheeled robot design, incorporating one caster wheel for stability. The robot is equipped with a two-jointed arm to enable basic manipulation tasks. Our goal is to create a functional robot capable of autonomous movement and object interaction. The project serves as a foundation for further exploration and enhancements in robotics.
+
+
 
 
 
