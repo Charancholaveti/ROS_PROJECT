@@ -52,7 +52,17 @@ ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
 ```
 
 
+
+
+
+
+
 ![Robot Image](images/robot2.png)
+
+
+
+
+
 
 
 
@@ -64,7 +74,13 @@ ros2 launch my_robot_description display.launch.py
 ```
 
 
+
+
+
 ![Robot Image](images/robot1.png)
+
+
+
 
 
 
@@ -91,7 +107,15 @@ To start the robot simulation in Gazebo, use the following launch command:
 ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
 ```
 
+
+
+
+
 ![Robot Image](images/robot4.png)
+
+
+
+
 
 
 ## 2. Launch the Robot Description in RViz
@@ -101,7 +125,15 @@ To visualize the robot model in RViz, use the following command:
 ros2 launch my_robot_description display.launch.py
 ```
 
+
+
+
+
 ![Robot Image](images/robot3.png)
+
+
+
+
 
 
 ## 3. Control the Movement of the 4-Wheeled Robot
@@ -128,7 +160,17 @@ To visualize the robot model in RViz, use the following command:
 ros2 launch my_robot_description display.launch.py
 ```
 
+
+
+
+
+
 ![Robot Image](images/robot5.png)
+
+
+
+
+
 
 
 # Enhancement 3
@@ -141,6 +183,13 @@ To visualize the robot model in RViz, use the following command:
 ```bash
 ros2 launch my_robot_description display.launch.py
 ```
+
+
+
+
+
+
+
 
 
 ![Robot Image](images/robot6.png)
