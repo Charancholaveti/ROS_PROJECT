@@ -1,16 +1,21 @@
 <launch>
-    <let name="urdf_path" 
-         value="$(find-pkg-share my_robot_description)/urdf/my_robot.urdf.xacro" />
-    <let name="rviz_config_path"
-         value="$(find-pkg-share my_robot_description)/rviz/urdf_config.rviz" />
+    <!-- Define paths to URDF and RViz config files using find_package_share -->
+    <arg name="urdf_path" default="$(find_package_share my_robot_description)/urdf/my_robot.urdf.xacro" />
+    <arg name="rviz_config_path" default="$(find_package_share my_robot_description)/rviz/urdf_config.rviz" />
 
-    <node pkg="robot_state_publisher" exec="robot_state_publisher">
+    <!-- Robot State Publisher Node -->
+    <node pkg="robot_state_publisher" exec="robot_state_publisher" 
+          name="robot_state_publisher">
         <param name="robot_description"
-               value="$(command 'xacro $(var urdf_path)')" />
+               value="$(command 'xacro $(arg urdf_path)')" />
     </node>
 
-    <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui" />
+    <!-- Joint State Publisher GUI -->
+    <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui" 
+          name="joint_state_publisher_gui"/>
 
+    <!-- RViz Node -->
     <node pkg="rviz2" exec="rviz2" output="screen" 
-          args="-d $(var rviz_config_path)" />
+          name="rviz2" 
+          args="-d $(arg rviz_config_path)" />
 </launch>
