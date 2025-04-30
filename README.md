@@ -142,7 +142,51 @@ ros2 launch my_robot_description display.launch.py
 4. **Source the setup file**: This step ensures that ROS 2 knows about the packages you just built.
 5. **Launch commands**: Instructions to launch the robot simulation in Gazebo and visualize it in RViz.
 
-Let me know if you need anything further!
+# Robot Control and Simulation
+
+## Setup
+
+## 1. Create a ROS 2 Workspace
+
+### First, create a new ROS 2 workspace by following these steps:
+
+```bash
+# Create a directory for your ROS 2 workspace
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+```
+## 2. Clone the Project Repository
+### Next, clone the project from GitHub into the src folder of your workspace:
+
+```bash
+# Clone the repository
+git clone https://github.com/Charancholaveti/ROS_PROJECT.git
+```
+## 3. Build the Workspace
+### Once the repository is cloned, navigate back to the workspace directory and build the workspace using colcon:
+
+```bash
+cd ~/ros2_ws
+colcon build
+```
+## 4. Source the Workspace
+### After building the workspace, source the setup file to make the packages available for use:
+
+```bash
+source install/setup.bash
+```
+## 5. Launch the Robot in Gazebo
+### To start the robot simulation in Gazebo, use the following launch command:
+```bash
+ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
+```
+
+## 6. Launch the Robot Description in RViz
+### To visualize the robot model in RViz, use the following command:
+
+```bash
+ros2 launch my_robot_description display.launch.py
+```
 
 
 
