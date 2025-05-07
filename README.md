@@ -242,7 +242,7 @@ ros2 launch my_robot_description display.launch.py
 ## 1. Create a ROS 2 Workspace
 
 First, create a new ROS 2 workspace by following these steps:
-
+ 
 ```bash
 # Create a directory for your ROS 2 workspace
 mkdir -p ~/ros2_ws/src
