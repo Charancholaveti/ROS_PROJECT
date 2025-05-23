@@ -14,7 +14,7 @@ This project simulates a mobile robot featuring a 4-wheeled base and a 6-DOF rob
 
 This simulation was developed and tested on the following system:
 
-- **Operating System**: Ubuntu 22.04 LTS  
+- **Operating System **: Ubuntu 22.04 LTS  
 - **ROS 2 Distribution**: Humble Hawksbill  
 - **Simulator**: Gazebo  
 ---
